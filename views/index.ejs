@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="Content/app.css" />
     <style type="text/css">
       .fa_custom {
-      color: #0099CC
+        color: #0099cc;
       }
-      </style>
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,17 +34,21 @@
         <ul class="navbar-nav ml-auto">
           <!-- Home -->
           <% if(title =="Home") { %>
-          <li class="nav-item active">
-            <% } else { %>
+          <li class="nav-item active"><% } else { %></li>
+
           <li class="nav-item">
             <% } %>
 
-            <a class="nav-link" href="/"><i class="fa fa-home fa_custom fa-2x"></i>Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/"
+              ><i class="fa fa-home fa_custom fa-2x"></i>Home<span
+                class="sr-only"
+                >(current)</span
+              ></a
+            >
           </li>
 
           <% if(title =="About") { %>
-          <li class="nav-item active">
-            <% } else { %>
+          <li class="nav-item active"><% } else { %></li>
 
           <li class="nav-item">
             <% } %>
@@ -54,8 +58,7 @@
           </li>
 
           <% if(title =="Products") { %>
-          <li class="nav-item active">
-            <% } else { %>
+          <li class="nav-item active"><% } else { %></li>
 
           <li class="nav-item">
             <% } %>
@@ -65,7 +68,7 @@
           </li>
 
           <% if(title =="Services") { %>
-          <li class="nav-item active"><% } else { %>
+          <li class="nav-item active"><% } else { %></li>
 
           <li class="nav-item">
             <% } %>
@@ -75,7 +78,7 @@
           </li>
 
           <% if(title =="Contact") { %>
-          <li class="nav-item active"><% } else { %>
+          <li class="nav-item active"><% } else { %></li>
 
           <li class="nav-item">
             <% } %>
@@ -88,7 +91,7 @@
     </nav>
 
     <div class="container">
-      <div class="jumbotron">
+      <div style="background-color:lightskyblue" class="jumbotron">
         <h1 class="display-4">Welcome to <%= title %> Page</h1>
         <p class="lead">
           This is a simple hero unit, a simple jumbotron-style component for
@@ -99,8 +102,16 @@
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
+        <hr class="my-4" />
+        <p>
+          COMP308 - W2019 - Exercise 3 - Express Demo
+        </p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button"
+          <a
+            style="background-color: black"
+            class="btn btn-primary btn-lg"
+            href="#"
+            role="button"
             >Learn more</a
           >
         </p>
@@ -108,10 +119,10 @@
     </div>
 
     <footer>
-        <nav class="navbar fixed-bottom navbar-light bg-light">
-                <h6>&copy; Copyright @Bhavna Pulliahgari</h6>
-        </nav>
-</footer>
+      <nav class="navbar fixed-bottom navbar-light bg-light">
+        <h6>&copy; Copyright - @Bhavna Pulliahgari - 2019</h6>
+      </nav>
+    </footer>
     <!--JavaScript Section-->
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
