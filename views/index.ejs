@@ -7,8 +7,13 @@
     <title><%= title %></title>
     <!-- CC Section-->
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome/css//font-awesome.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="Content/app.css" />
+    <style type="text/css">
+      .fa_custom {
+      color: #0099CC
+      }
+      </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,54 +32,55 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+          <!-- Home -->
           <% if(title =="Home") { %>
-          <li class="nav-item active"><% } else { %></li>
-
+          <li class="nav-item active">
+            <% } else { %>
           <li class="nav-item">
             <% } %>
-            <a class="nav-link" href="/"
-              ><i class="fa fa-lg fa-home"></i> Home
-              <span class="sr-only">(current)</span></a
-            >
+
+            <a class="nav-link" href="/"><i class="fa fa-home fa_custom fa-2x"></i>Home<span class="sr-only">(current)</span></a>
           </li>
 
           <% if(title =="About") { %>
-          <li class="nav-item active"><% } else { %></li>
+          <li class="nav-item active">
+            <% } else { %>
 
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/about"
-              ><i class="fa fa-lg fa-info"></i> About</a
+              ><i class="fa fa-info-circle fa_custom fa-2x"></i> About</a
             >
           </li>
 
           <% if(title =="Products") { %>
-          <li class="nav-item active"><% } else { %></li>
+          <li class="nav-item active">
+            <% } else { %>
 
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/products"
-              ><i class="fa fa-lg fa-briefcase"></i> Products</a
+              ><i class="fa fa-dropbox fa_custom fa-2x"></i> Products</a
             >
           </li>
 
           <% if(title =="Services") { %>
-          <li class="nav-item active"><% } else { %></li>
+          <li class="nav-item active"><% } else { %>
 
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/services"
-              ><i class="fa fa-lg fa-birthday-cake"></i> Services</a
+              ><i class="fa fa-cogs fa_custom fa-2x"></i> Services</a
             >
           </li>
 
           <% if(title =="Contact") { %>
-          <li class="nav-item active"><% } else { %></li>
+          <li class="nav-item active"><% } else { %>
 
           <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/contact"
-              ><i class="fa fa-lg fa-phone"></i> Contact</a
+              ><i class="fa fa-phone fa_custom fa-2x"></i> Contact</a
             >
           </li>
         </ul>
@@ -83,7 +89,7 @@
 
     <div class="container">
       <div class="jumbotron">
-        <h1 class="display-4">Welcome to <%= title %></h1>
+        <h1 class="display-4">Welcome to <%= title %> Page</h1>
         <p class="lead">
           This is a simple hero unit, a simple jumbotron-style component for
           calling extra attention to featured content or information.
@@ -101,6 +107,11 @@
       </div>
     </div>
 
+    <footer>
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+                <h6>&copy; Copyright @Bhavna Pulliahgari</h6>
+        </nav>
+</footer>
     <!--JavaScript Section-->
     <script src="jquery/dist/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
