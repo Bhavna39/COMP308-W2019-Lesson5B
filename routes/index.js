@@ -12,7 +12,7 @@ router.get('/about', function(req, res, next) {
 });
 
 //products
-router.get('/products ', function(req, res, next) {
+router.get('/products', function(req, res, next) {
   res.render('index', { title: 'Products' });
 });
 
