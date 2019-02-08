@@ -1,120 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= title %></title>
-    <!-- CC Section-->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="Content/app.css" />
-    <style type="text/css">
-      .fa_custom {
-        color: #0099cc;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">COMP308</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <!-- Home -->
-          <% if(title =="Home") { %>
-          <li class="nav-item active"><% } else { %></li>
-
-          <li class="nav-item">
-            <% } %>
-
-            <a class="nav-link" href="/"
-              ><i class="fa fa-home fa_custom fa-2x"></i>Home<span
-                class="sr-only"
-                >(current)</span
-              ></a
-            >
-          </li>
-
-          <% if(title =="About") { %>
-          <li class="nav-item active"><% } else { %></li>
-
-          <li class="nav-item">
-            <% } %>
-            <a class="nav-link" href="/about"
-              ><i class="fa fa-info-circle fa_custom fa-2x"></i> About</a
-            >
-          </li>
-
-          <% if(title =="Products") { %>
-          <li class="nav-item active"><% } else { %></li>
-
-          <li class="nav-item">
-            <% } %>
-            <a class="nav-link" href="/products"
-              ><i class="fa fa-dropbox fa_custom fa-2x"></i> Products</a
-            >
-          </li>
-
-          <% if(title =="Services") { %>
-          <li class="nav-item active"><% } else { %></li>
-
-          <li class="nav-item">
-            <% } %>
-            <a class="nav-link" href="/services"
-              ><i class="fa fa-cogs fa_custom fa-2x"></i> Services</a
-            >
-          </li>
-
-          <% if(title =="Contact") { %>
-          <li class="nav-item active"><% } else { %></li>
-
-          <li class="nav-item">
-            <% } %>
-            <a class="nav-link" href="/contact"
-              ><i class="fa fa-phone fa_custom fa-2x"></i> Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
+<% include ./partials/header.ejs %>
 
     <div class="container">
-      <div style="background-color:lightskyblue" class="jumbotron">
+      <div class="jumbotron">
         <h1 class="display-4">Welcome to <%= title %> Page</h1>
-        <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <hr class="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <hr class="my-4" />
-        <p>
-          COMP308 - W2019 - Exercise 3 - Express Demo
-        </p>
-        <p class="lead">
-          <a
-            style="background-color: black"
-            class="btn btn-primary btn-lg"
-            href="#"
-            role="button"
-            >Learn more</a
-          >
-        </p>
+        <% if (title == "Contact") { %>
+          <a class="btn btn-primary" href="/contact-list" role="button">Contact List</a>
+        <% } %>
       </div>
     </div>
 
@@ -123,9 +14,5 @@
         <h6>&copy; Copyright - @Bhavna Pulliahgari - 2019</h6>
       </nav>
     </footer>
-    <!--JavaScript Section-->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="Scripts/app.js"></script>
-  </body>
-</html>
+
+  <% include ./partials/footer.ejs %>

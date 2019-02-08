@@ -8,19 +8,18 @@ let contact = require('../models/contact');
 /* GET Contact List page - Read operation */
 
 router.get('/', (req, res, next) => {
-    contact.find((err, contatcList) => {
+    contact.find((err, contactList) => {
             if(err){
                 return console.error(err);
             }
             else{
-                console.log(contatcList);
+               // console.log(contactList);
 
-                /*
-                res.render('contact/index', {
-                    title: 'Contact List'.
+                res.render('contacts/index', {
+                    title: 'Contact List',
                     contactList: contactList
                 });
-                */
+                
             }
     });
 });
