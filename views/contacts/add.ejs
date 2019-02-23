@@ -1,0 +1,41 @@
+<% include ../partials/header.ejs %>
+
+<!-- Content for the add page-->
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <h1><%=title %></h1>
+
+      <form action="" class="form" method="POST">
+        <div class="form-group">
+          <label for="NameTextField">Name</label>
+          <input
+            type="text"
+            class="form-contorl"
+            id="NameTextField"
+            placeholder="Enter Favourite Name"
+            name="Name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="DescTextField">Description</label>
+          <input
+            type="text"
+            class="form-contorl"
+            id="DescTextField"
+            placeholder="Add Description"
+            name="Description"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-edit"></i> Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
