@@ -71,24 +71,41 @@ router.get("/edit/:id", (req, res, next) => {
 
 /*POST request - UPDATE database with data */
 
-router.post('/edit/:id', (req, res, next) => {
+router.post("/edit/:id", (req, res, next) => {
   let id = req.params.id;
 
   let updatedContact = contactModel({
-    "_id": id,
-    "Name": req.body.Name,
-    "Description": req.body.Description
+    _id: id,
+    Name: req.body.Name,
+    Description: req.body.Description
   });
 
-  contactModel.update({ _id:id}, updatedContact, (err) => {
+  contactModel.update({ _id: id }, updatedContact, err => {
     if (err) {
       console.log(err);
       res.end(err);
     } else {
       //refresh the contact list
+      res.redirect("/contact-list");
+    }
+  });
+});
+
+/* GET request to perform the delete action*/
+
+router.get('/delete/:id', (req, res, next) => {
+  let id = req.params.id;
+
+  contactModel.remove({ _id: id }, (err) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } 
+    else {
+      //refresh contact list
       res.redirect('/contact-list');
     }
-  })
+  });
 });
 
 module.exports = router;
