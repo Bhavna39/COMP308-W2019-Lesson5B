@@ -3,7 +3,7 @@
     <!-- embed content here -->
     <div class="container">
         <div class="row">
-            <div class="col-md-offsetr-3 col-md-6">
+            <div class="col-md-offsetr-3 col-md-8">
 
                         <h1><%= title %></h1>
                         <a class="btn btn-primary" href="/contact-list/add" role="button">
@@ -14,6 +14,8 @@
                             <tr>
                                 <th class="text-center">Favourite Thing</th>
                                 <th class="text-center">Description</th>
+                                <th class="text-center"></th>
+                                <th class="text-center"></th>
                             </tr>
 
                             <!-- Repeatable Template Row-->
@@ -21,6 +23,16 @@
                              <tr>
                                  <td class="text-center"><%= contactList[count].Name %></td>
                                  <td class="text-center"><%= contactList[count].Description %></td>
+                                 
+                                 <td class="text-center">
+                                 <a href="/contact-list/edit/<%= contactList[count]._id %>" 
+                                 class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
+                                 </td>
+
+                                 <td class="text-center">
+                                 <a href="/contact-list/delete/<%= contactList[count]._id %>" 
+                                 class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                                 </td>
                              </tr>
                             <% } %>
                         </table>
