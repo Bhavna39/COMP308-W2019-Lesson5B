@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-let app = require('./app'); //app.js comes first 
+let app = require('./server/config/app'); //app.js comes first 
 let debug = require('debug')('comp308-w2019-lesson3b:server');
 let http = require('http');
 
